@@ -1,0 +1,18 @@
+<div [@routerTransition]>
+  <h3>Pasos</h3>
+  <ul> 
+    <li>Ir a mercadolibre</li> 
+    <li>Autenticar</li> 
+    <li>Autorizar</li>
+  </ul> 
+  <br>
+  <div *ngIf="!isLoggedIn">
+    <a href="{{authUrl}}">Ir a mercadolibre</a>
+  </div>
+  <div *ngIf="isLoggedIn">
+    Usuario autenticado correctamente!
+    Tu access token es : {{access_token}}
+  </div>
+
+  
+</div>
